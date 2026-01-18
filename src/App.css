@@ -1,10 +1,22 @@
 @import "tailwindcss";
+@font-face {
+  font-family: 'DMSans';
+  src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Mulish';
+  src: url('./assets/fonts/Mulish-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  margin: 0 10%;
   text-align: center;
 }
-@layer components{
+body{
+  font-family: 'Mulish';
+}
+/*@layer components{
   .header_container{
     display: flex;
     flex-direction: row;
@@ -18,4 +30,4 @@
     background-color: var(--color-orange-500);
     color: var(--color-red-300);
   }
-}
+}*/
