@@ -9,21 +9,33 @@ import metrics_img from '../../assets/Content Image.png'
 import details_img1 from '../../assets/Icon 001.png'
 import details_img2 from '../../assets/Icon 002.png'
 import details_img3 from '../../assets/Icon 003.png'
+import arrow from '../../assets/arrow-down.svg'
 
 function Home(){
     return (
   <>
+  <div id='top'></div>
     <div className="flex flex-row justify-around my-10 items-center">
       <div className='gap-10 w-[500px]'>
         <div className='text-[70px] text-base/20 text-left font-bold'>Развивайте свой бизнес по подпискам</div>
         <div className='text-[18px] text-left font-normal my-8'>Продукты, ориентированные на конечный результат, снижают отток клиентов, оптимизируют ценообразование и расширяют ваш бизнес по подписке в целом.</div>
-        <a href="#" className="flex w-50 h-12.5 items-center
+        <div className='flex flex-row justify-between w-3/5'>
+          <a href="#" className="flex w-50 h-12.5 items-center
              items-center justify-center bg-indigo-600 rounded-lg text-white text-[17px] font-bold">Начать</a>
+          <button type='button' onClick={
+            ()=>{
+              const target=document.getElementById('image_func')
+              if (target){
+                target.scrollIntoView({behavior:'smooth'})
+              }
+            }
+          } className='flex justify-center items-center border rounded-full size-12.5 cursor-pointer'><img src={arrow} alt='Вниз'></img></button>
+        </div>
       </div>
       <img src={hero_img} alt="Ы" className='h-[644px]'/>
     </div>
     <div className='flex flex-row justify-around my-20'>
-      <img src={group_img1} alt="что-то"/>
+      <img src={group_img1} alt="что-то" id='image_func'/>
       <img src={group_img2} alt="что-то"/>
       <img src={group_img3} alt="что-то"/>
       <img src={group_img4} alt="что-то"/>
@@ -70,7 +82,7 @@ function Home(){
         <div className='text-[14px] font-normal my-4'>Проведите аудит, где существует утечка доходов и где вы можете увеличить удержание персонала.</div>
       </div>
     </div>
-    <div className='my-20'>
+    <div className='my-20' id='prices'>
       <div className='flex flex-row justify-between items-center'>
         <div className='text-[50px] text-base/20 text-left font-bold w-200'>Разработайте правильный план для будущего продукта.</div>
         <div className='flex w-60 h-15 rounded-lg bg-gray-100 p-1'>
@@ -78,7 +90,7 @@ function Home(){
           <div className='flex justify-center items-center w-[50%] font-bold'>Месяц</div>
         </div>
       </div>
-      <div className='flex flex-row justify-between items-center my-20'>
+      <div className='flex flex-row justify-between items-center my-20 gap-5'>
         <div className='text-center rounded-lg bg-gray-100 p-5 w-[350px]'>
           <div className='font-bold'>Начинающий</div>
           <div className='text-[50px] font-bold pb-3'>Бесплатно</div>
