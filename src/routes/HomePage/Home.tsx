@@ -10,12 +10,13 @@ import details_img1 from '../../assets/Icon 001.png'
 import details_img2 from '../../assets/Icon 002.png'
 import details_img3 from '../../assets/Icon 003.png'
 import arrow from '../../assets/arrow-down.svg'
+import { useTheme } from '../../App'
 
 function Home(){
     return (
   <>
-  <div id='top'></div>
-    <div className="flex flex-row justify-around my-10 items-center">
+  <div className='' id='top'></div>
+    <div className="flex flex-row justify-around mb-10 pt-20 items-center">
       <div className='gap-10 w-[500px]'>
         <div className='text-[70px] text-base/20 text-left font-bold'>Развивайте свой бизнес по подпискам</div>
         <div className='text-[18px] text-left font-normal my-8'>Продукты, ориентированные на конечный результат, снижают отток клиентов, оптимизируют ценообразование и расширяют ваш бизнес по подписке в целом.</div>
@@ -29,7 +30,7 @@ function Home(){
                 target.scrollIntoView({behavior:'smooth'})
               }
             }
-          } className='flex justify-center items-center border rounded-full size-12.5 cursor-pointer'><img src={arrow} alt='Вниз'></img></button>
+          } className='flex justify-center items-center bg-white border rounded-full size-12.5 cursor-pointer'><img src={arrow} alt='Вниз'></img></button>
         </div>
       </div>
       <img src={hero_img} alt="Ы" className='h-[644px]'/>
@@ -87,11 +88,11 @@ function Home(){
         <div className='text-[50px] text-base/20 text-left font-bold w-200'>Разработайте правильный план для будущего продукта.</div>
         <div className='flex w-60 h-15 rounded-lg bg-gray-100 p-1'>
           <div className='flex justify-center items-center w-[50%] text-white rounded-l-lg bg-indigo-500 font-bold'>Год</div>
-          <div className='flex justify-center items-center w-[50%] font-bold'>Месяц</div>
+          <div className='flex justify-center items-center w-[50%] font-bold text-black'>Месяц</div>
         </div>
       </div>
       <div className='flex flex-row justify-between items-center my-20 gap-5'>
-        <div className='text-center rounded-lg bg-gray-100 p-5 w-[350px]'>
+        <div className='text-center rounded-lg bg-gray-100 p-5 w-[350px] text-black'>
           <div className='font-bold'>Начинающий</div>
           <div className='text-[50px] font-bold pb-3'>Бесплатно</div>
           <div className='flex flex-col justify-center items-center'>
@@ -117,7 +118,7 @@ function Home(){
               rounded-lg bg-orange-800 rounded-lg font-bold text-[17px] mt-10">Узнать больше</a>
           </div>
         </div>
-        <div className='text-center rounded-lg bg-gray-100 p-5 w-[350px]'>
+        <div className='text-center rounded-lg bg-gray-100 p-5 w-[350px] text-black'>
           <div className='font-bold'>Для предприятий</div>
           <div className='flex justify-center items-end text-[50px] font-bold pb-3'>$49<div className='text-[20px] pb-2'>/месяц</div></div>
           <div className='flex flex-col justify-center items-center'>
